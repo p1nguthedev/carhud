@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedometer</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .speedometer {
+            position: relative;
+            width: 230px;
+            height: 160px;
+            background-color: #6a6a6a5b;
+            border-radius: 5px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 325px;
+            margin-top: 890px;
+        }
+        .speedometer .display {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        .speedometer span {
+            font-size: 24px;
+            color: #ffffff;
+        }
+        .speedometer .speed {
+            font-size: 64px;
+            left: 10px;
+        }
+        .speedometer .unit {
+            font-size: 20px;
+            font-weight: bold;
+            color: #03F7B9;
+            margin-right: 60px;
+            margin-left: 10px;
+        }
+        .speedometer .bars {
+            display: flex;
+            bottom: 25px;
+            margin-bottom: 5px;
+        }
+        .speedometer .bars div {
+            width: 5px;
+            height: 40px;
+            background-color: #6A6A6A5b;
+            margin: 0 3px;
+            transition: background-color 0.3s, height 0.3s;
+        }
+        .speedometer .red-bar {
+            width: 5px;
+            height: 40px;
+            background-color: #f70303;
+            margin: 0 3px;
+        }
+        .speedometer .gas {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .speedometer .gas-icon {
+            width: 24px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        .speedometer .progress-container {
+            width: 175px;
+            height: 20px;
+            background-color: #6A6A6A5b;
+        }
+        .speedometer .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #03F7B9;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="speedometer">
+        <div class="display">
+            <span class="speed">0</span>
+            <span class="unit">km/h</span>
+        </div>
+        <div class="bars">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="red-bar"></div>
+            <div class="red-bar"></div>
+            <div class="red-bar"></div>
+        </div>
+        <div class="gas">
+            <img src="./bensa.png" class="gas-icon">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="hud.js"></script>
+</body>
+</html>
